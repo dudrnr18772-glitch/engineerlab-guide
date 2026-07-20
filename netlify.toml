@@ -1,5 +1,5 @@
 [build]
-  command = "chmod +x scripts/*.sh && npm run build:netlify"
+  command = "npm run build:netlify"
   publish = "netlify-dist"
 
 [build.environment]
