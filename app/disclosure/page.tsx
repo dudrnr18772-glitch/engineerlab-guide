@@ -1,0 +1,7 @@
+import type { Metadata } from "next";
+import { Breadcrumbs, ExternalLink, SiteShell } from "../ui";
+import { partnerUrl, verifiedDate } from "../site-data";
+
+export const metadata: Metadata = { title: "정보 제공 및 제휴 고지", description: "엔지니어랩 가이드의 비공식 정보 제공 범위와 제휴 링크 운영 원칙을 안내합니다.", robots: { index: false, follow: true }, alternates: { canonical: "/disclosure/" } };
+
+export default function DisclosurePage() { return <SiteShell currentPath=""><section className="legal-hero"><div className="container narrow"><Breadcrumbs current="정보 제공 및 제휴 고지" /><p className="eyebrow">DISCLOSURE</p><h1>정보 제공 및 제휴 고지</h1><p>이 사이트가 제공하는 정보의 범위와 외부 링크 이용 원칙을 안내합니다.</p></div></section><article className="container narrow legal-content"><section><h2>비공식 정보 제공 사이트</h2><p>엔지니어랩 가이드는 엔지니어랩 공식 홈페이지나 공식 고객센터가 아닙니다. 전기·소방 자격증과 공기업 관련 강의 선택 기준, 시크릿코드 이용 순서를 정리한 독립적인 정보 제공 사이트입니다.</p></section><section><h2>제휴 링크 안내</h2><p>사이트의 일부 외부 링크는 제휴 링크일 수 있습니다. 이용자가 해당 링크를 통해 가입하거나 상품을 구매하면 사이트 운영자에게 일정한 수익이 발생할 수 있으나, 링크 이용으로 이용자의 결제 금액에 별도 비용이 추가된다는 의미는 아닙니다.</p></section><section><h2>최종 확인이 필요한 정보</h2><p>강의 구성, 담당 강사, 수강 기간, 교재, 쿠폰 대상 상품, 유효기간, 중복 할인 조건과 프로모션 운영 여부는 변경될 수 있습니다. 결제 전 엔지니어랩 공식 페이지에서 최신 내용을 최종 확인하세요.</p><ExternalLink className="button primary" href={partnerUrl}>공식 프로모션 페이지 확인하기</ExternalLink></section><section><h2>상표와 운영 주체</h2><p>‘엔지니어랩’ 명칭과 관련 상표의 권리는 해당 권리자에게 있습니다. 이 사이트는 공식 로고를 사용하지 않으며 엔지니어랩이 운영하는 것처럼 표현하지 않습니다.</p></section><p className="verified">정보 확인일: {verifiedDate}</p></article></SiteShell>; }

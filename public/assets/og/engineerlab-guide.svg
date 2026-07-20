@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#edf4fb"/>
+  <circle cx="1050" cy="90" r="210" fill="#f6e7c9"/>
+  <rect x="72" y="72" width="1056" height="486" rx="34" fill="#ffffff" stroke="#dce3ec" stroke-width="2"/>
+  <g transform="translate(112 112)">
+    <rect width="58" height="58" rx="15" fill="#173b67"/>
+    <rect x="17" y="29" width="6" height="15" rx="3" fill="#fff"/>
+    <rect x="27" y="18" width="6" height="26" rx="3" fill="#fff"/>
+    <rect x="37" y="24" width="6" height="20" rx="3" fill="#fff"/>
+    <circle cx="47" cy="11" r="7" fill="#d97706"/>
+    <text x="76" y="29" font-size="28" font-weight="800" fill="#173b67" font-family="Arial, sans-serif">ENGINEERLAB GUIDE</text>
+    <text x="76" y="51" font-size="15" font-weight="700" letter-spacing="4" fill="#718096" font-family="Arial, sans-serif">INFORMATION SITE</text>
+  </g>
+  <text x="112" y="285" font-size="62" font-weight="800" fill="#102f52" font-family="Arial, sans-serif">엔지니어랩 강의와 할인 혜택</text>
+  <text x="112" y="355" font-size="62" font-weight="800" fill="#102f52" font-family="Arial, sans-serif">한눈에 확인하는 가이드</text>
+  <rect x="112" y="407" width="265" height="70" rx="16" fill="#173b67"/>
+  <text x="150" y="452" font-size="26" font-weight="800" fill="#ffffff" font-family="Arial, sans-serif">시크릿코드 e7288</text>
+  <text x="410" y="449" font-size="23" font-weight="700" fill="#b65f08" font-family="Arial, sans-serif">6만원 할인쿠폰 확인</text>
+  <text x="112" y="519" font-size="17" fill="#607185" font-family="Arial, sans-serif">전기 · 소방 자격증 · 공기업 NCS 과정 선택 기준</text>
+</svg>

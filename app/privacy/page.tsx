@@ -1,0 +1,7 @@
+import type { Metadata } from "next";
+import { Breadcrumbs, SiteShell } from "../ui";
+import { verifiedDate } from "../site-data";
+
+export const metadata: Metadata = { title: "개인정보처리방침", description: "엔지니어랩 가이드의 개인정보 수집 여부와 외부 사이트 이동 시 적용되는 정책을 안내합니다.", robots: { index: false, follow: true }, alternates: { canonical: "/privacy/" } };
+
+export default function PrivacyPage() { return <SiteShell currentPath=""><section className="legal-hero"><div className="container narrow"><Breadcrumbs current="개인정보처리방침" /><p className="eyebrow">PRIVACY</p><h1>개인정보처리방침</h1><p>엔지니어랩 가이드는 회원 기능이나 문의 폼을 운영하지 않습니다.</p></div></section><article className="container narrow legal-content"><section><h2>수집하는 개인정보</h2><p>현재 이 사이트는 이용자의 회원가입 정보, 이름, 전화번호, 이메일, 결제 정보, 문의 내용을 직접 수집하거나 저장하지 않습니다. 자체 분석 쿠키와 행동 분석 도구도 사용하지 않습니다.</p><ul className="feature-list"><li><span aria-hidden="true">✓</span>회원가입 및 로그인 기능 없음</li><li><span aria-hidden="true">✓</span>문의 폼과 댓글 기능 없음</li><li><span aria-hidden="true">✓</span>자체 결제 및 데이터베이스 없음</li><li><span aria-hidden="true">✓</span>자체 분석 쿠키와 광고 추적 도구 없음</li></ul></section><section><h2>외부 사이트 이동</h2><p>할인 혜택 확인 버튼을 누르면 엔지니어랩 공식 프로모션 페이지 등 외부 사이트로 이동합니다. 외부 사이트에서 이루어지는 회원가입, 로그인, 결제와 개인정보 처리는 해당 사이트의 개인정보처리방침과 이용약관을 따릅니다.</p></section><section><h2>정책 변경</h2><p>향후 문의 기능이나 분석 도구 등 개인정보 처리 방식이 추가되면 실제 운영 내용을 반영해 이 방침을 수정하고 변경일을 안내합니다.</p></section><p className="verified">정보 확인일: {verifiedDate}</p></article></SiteShell>; }
