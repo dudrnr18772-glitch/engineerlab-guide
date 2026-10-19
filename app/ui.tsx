@@ -18,7 +18,7 @@ function Header({ currentPath }: { currentPath: string }) {
       <div className="container header-inner">
         <Link className="brand" href="/" aria-label="엔지니어랩 가이드 홈"><LogoMark /><span><strong>엔지니어랩</strong><small>GUIDE</small></span></Link>
         <nav className="desktop-nav" aria-label="주요 메뉴">{navigation.map((item) => <Link key={item.href} href={item.href} aria-current={currentPath === item.href ? "page" : undefined}>{item.label}</Link>)}</nav>
-        <ExternalLink href={partnerUrl} className="header-cta">e7288로 6만원 쿠폰 받기</ExternalLink>
+        <ExternalLink href={partnerUrl} className="header-cta">e7288 쿠폰 조건 확인하기</ExternalLink>
         <details className="mobile-nav"><summary aria-label="메뉴 열기"><span></span><span></span><span></span></summary><nav aria-label="모바일 메뉴">{navigation.map((item) => <Link key={item.href} href={item.href} aria-current={currentPath === item.href ? "page" : undefined}>{item.label}</Link>)}<ExternalLink href={partnerUrl}>6만원 쿠폰 확인하기</ExternalLink></nav></details>
       </div>
       <div className="disclosure-line"><div className="container">본 사이트는 엔지니어랩 공식 홈페이지가 아닌 정보 제공용 가이드입니다. 일부 외부 링크는 제휴 링크일 수 있습니다.</div></div>

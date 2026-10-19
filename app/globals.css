@@ -209,6 +209,19 @@ h2 { color: #153453; font-size: clamp(28px, 3.2vw, 40px); line-height: 1.25; let
 .timeline li { position: relative; display: grid; grid-template-columns: 36px 1fr; gap: 16px; align-items: center; margin: 0 0 15px; }
 .timeline li span { z-index: 1; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--primary); color: #fff; font-weight: 800; font-size: 11px; }
 .timeline li p { margin: 0; background: #fff; border: 1px solid var(--border); border-radius: 9px; padding: 11px 14px; font-size: 14px; color: #415366; }
+.screenshot-steps { list-style: none; padding: 0; margin: 30px 0 0; display: grid; gap: 32px; }
+.screenshot-steps > li { min-width: 0; padding: 22px; border: 1px solid var(--border); border-radius: 14px; background: #fff; scroll-margin-top: 24px; }
+.screenshot-copy { display: flex; align-items: flex-start; gap: 14px; }
+.screenshot-copy .step-number { flex: 0 0 36px; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; background: var(--primary); color: #fff; font-weight: 800; }
+.screenshot-copy h3 { margin: 2px 0 7px; color: var(--primary); font-size: 19px; line-height: 1.35; }
+.screenshot-copy p { margin: 0; color: #415366; line-height: 1.65; }
+.screenshot-steps figure { margin: 18px 0 0; }
+.screenshot-steps img { display: block; max-width: 100%; width: auto; height: auto; max-height: 680px; margin-inline: auto; border: 1px solid var(--border); border-radius: 8px; object-fit: contain; }
+.screenshot-steps figcaption { margin-top: 9px; color: var(--muted); font-size: 12px; text-align: center; }
+.product-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 22px 0; }
+.product-groups > div { min-width: 0; padding: 18px; border: 1px solid var(--border); border-radius: 11px; background: #fff; }
+.product-groups h3 { margin: 0 0 10px; color: var(--primary); font-size: 16px; }
+.product-groups ul { margin: 0; padding-left: 20px; color: #415366; font-size: 14px; line-height: 1.7; }
 .alert-box { background: var(--accent-soft); border: 1px solid #f1d6ab !important; border-radius: 13px; padding: 28px !important; }
 .alert-box ul { columns: 2; padding-left: 20px; color: #654d2b; font-size: 13px; }
 .alert-box li { margin-bottom: 8px; break-inside: avoid; }
@@ -277,6 +290,11 @@ h2 { color: #153453; font-size: clamp(28px, 3.2vw, 40px); line-height: 1.25; let
   .inline-cta { display: grid; }
   .alert-box ul { columns: 1; }
   .coupon-hero h1 br { display: none; }
+  .screenshot-steps > li { padding: 16px; }
+  .screenshot-copy h3 { font-size: 17px; }
+  .screenshot-copy p { font-size: 14px; }
+  .screenshot-steps img { max-height: none; width: 100%; }
+  .product-groups { grid-template-columns: 1fr; }
   .not-found h1 { font-size: 34px; }
 }
 
