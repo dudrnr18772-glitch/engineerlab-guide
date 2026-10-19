@@ -3,7 +3,7 @@ import { Breadcrumbs, ExternalLink, FAQ, SecretCodeCard, SiteShell } from "../ui
 import { courses, partnerUrl, siteUrl, type FAQItem } from "../site-data";
 
 const pageUrl = `${siteUrl}/secret-code/`;
-const heroImage = `${siteUrl}/assets/og/secret-code.jpg`;
+const heroImage = `${siteUrl}/assets/og/secret-code-e7288-square.jpg`;
 const screenshots = [
   { file: "6", title: "공식 홈페이지에서 회원가입 선택", alt: "엔지니어랩 홈페이지 오른쪽 상단의 회원가입 버튼이 빨간색으로 표시된 화면", body: "엔지니어랩 홈페이지 오른쪽 상단의 ‘회원가입’을 선택합니다.", width: 936, height: 936 },
   { file: "7", title: "가입 양식의 시크릿 코드 칸에 e7288 입력", alt: "일반 가입 양식 하단의 시크릿 코드 입력란과 회원가입 버튼이 보이는 화면", body: "일반 가입 양식 아래쪽 ‘시크릿 코드’ 입력란에 e7288을 입력합니다. 화면에 보이는 다른 가입 정보와 동의 항목도 확인한 뒤 가입을 진행합니다.", width: 936, height: 1872 },
@@ -13,10 +13,10 @@ const screenshots = [
 
 export const metadata: Metadata = {
   title: "엔지니어랩 시크릿코드 e7288 6만원 할인쿠폰 받는 법",
-  description: "엔지니어랩 회원가입 시 시크릿코드 e7288을 입력하고 6만원 할인쿠폰을 받는 방법. 입력 위치부터 쿠폰함 확인, 대상상품과 사용 조건까지 안내합니다.",
+  description: "엔지니어랩 할인받는 방법: 회원가입 시 시크릿코드 e7288을 입력해 6만원 할인쿠폰을 받으세요. 입력 위치, 쿠폰함 확인, 대상 인강과 30일 사용 조건을 안내합니다.",
   alternates: { canonical: "/secret-code/" },
-  openGraph: { title: "엔지니어랩 시크릿코드 e7288 이용 방법", description: "실제 화면으로 보는 회원가입, 코드 입력, 발급 메시지와 쿠폰함 확인", url: pageUrl, images: [{ url: heroImage, width: 1200, height: 630, alt: "엔지니어랩 시크릿코드 안내 대표 이미지" }] },
-  twitter: { card: "summary_large_image", title: "엔지니어랩 시크릿코드 e7288 이용 방법", description: "실제 화면으로 보는 코드 입력과 쿠폰함 확인", images: [heroImage] },
+  openGraph: { title: "엔지니어랩 시크릿코드 e7288 | 6만원 할인쿠폰", description: "회원가입 화면에 e7288 입력, 쿠폰함 확인, 인강 결제 시 사용", url: pageUrl, images: [{ url: heroImage, width: 1200, height: 1200, type: "image/jpeg", alt: "엔지니어랩 시크릿코드 e7288, 6만원 할인쿠폰" }] },
+  twitter: { card: "summary_large_image", title: "엔지니어랩 시크릿코드 e7288 | 6만원 할인쿠폰", description: "회원가입 화면에 e7288 입력, 쿠폰함 확인, 인강 결제 시 사용", images: [heroImage] },
 };
 
 const faqs: FAQItem[] = [
@@ -35,13 +35,14 @@ const eligibleProducts = [
 
 export default function SecretCodePage() {
   const jsonLd = [
-    { "@context": "https://schema.org", "@type": "WebPage", name: "엔지니어랩 시크릿코드 e7288 6만원 할인쿠폰 받는 법", url: pageUrl, inLanguage: "ko-KR", image: heroImage },
+    { "@context": "https://schema.org", "@type": "WebPage", name: "엔지니어랩 시크릿코드 e7288 6만원 할인쿠폰 받는 법", url: pageUrl, inLanguage: "ko-KR", image: heroImage, primaryImageOfPage: { "@type": "ImageObject", url: heroImage, width: 1200, height: 1200, caption: "엔지니어랩 시크릿코드 e7288, 6만원 할인쿠폰" }, dateModified: "2026-10-19" },
     { "@context": "https://schema.org", "@type": "HowTo", name: "엔지니어랩 가입 화면에서 시크릿코드 e7288 입력과 쿠폰함 확인", inLanguage: "ko-KR", step: screenshots.map((step, index) => ({ "@type": "HowToStep", position: index + 1, name: step.title, text: step.body, image: `${siteUrl}/assets/secret-code/step-${step.file}.webp`, url: `${pageUrl}#step-${index + 1}` })) },
     { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) },
   ];
   return <SiteShell currentPath="/secret-code/"><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     <section className="guide-hero coupon-hero"><div className="container"><Breadcrumbs current="시크릿코드·할인쿠폰" /><div className="coupon-hero-grid"><div><p className="eyebrow">SECRET CODE GUIDE</p><h1>엔지니어랩 시크릿코드<br /><em>e7288</em>로 6만원 할인쿠폰 받는 방법</h1><p className="guide-lead">엔지니어랩 회원가입 화면의 ‘시크릿 코드’ 칸에 e7288을 입력하세요. 가입 후 마이페이지 쿠폰함에서 할인권을 확인하고, 인강 결제 시 사용하면 됩니다.</p></div><SecretCodeCard /></div></div></section>
-    <div className="container guide-layout"><aside className="toc"><strong>목차</strong><a href="#screenshots">쿠폰 받는 순서</a><a href="#terms">쿠폰 조건</a><a href="#products">대상상품 목록</a><a href="#existing-members">기존 회원 안내</a><a href="#payment">결제 전 확인</a><a href="#faq">자주 묻는 질문</a></aside><article className="guide-content">
+    <div className="container guide-layout"><aside className="toc"><strong>목차</strong><a href="#discount-answer">할인 핵심 정보</a><a href="#screenshots">쿠폰 받는 순서</a><a href="#terms">쿠폰 조건</a><a href="#products">대상상품 목록</a><a href="#existing-members">기존 회원 안내</a><a href="#payment">결제 전 확인</a><a href="#faq">자주 묻는 질문</a></aside><article className="guide-content">
+      <section id="discount-answer" className="discount-answer"><div><p className="section-kicker">할인 핵심 정보</p><h2>엔지니어랩 할인, 어떻게 받나요?</h2><p>엔지니어랩 회원가입 화면의 ‘시크릿 코드’ 칸에 <strong>e7288</strong>을 입력하면 6만원 할인쿠폰이 발급됩니다. 가입 후 <strong>마이페이지 → 쿠폰함</strong>에서 확인하고, 대상 인강을 결제할 때 쿠폰을 선택하세요.</p><dl><div><dt>시크릿코드</dt><dd>e7288</dd></div><div><dt>할인쿠폰</dt><dd>4만원 + 2만원, 총 6만원</dd></div><div><dt>사용 기간</dt><dd>발급일로부터 30일</dd></div><div><dt>교재</dt><dd>쿠폰 적용 제외·별도 구매</dd></div></dl><ExternalLink className="button primary" href={partnerUrl}>e7288로 할인쿠폰 받기</ExternalLink></div><img src="/assets/og/secret-code-e7288-square.jpg" alt="엔지니어랩 시크릿코드 e7288과 6만원 할인쿠폰 안내" width="1200" height="1200" loading="lazy" decoding="async" /></section>
       <section id="screenshots"><p className="section-kicker">화면으로 따라하기</p><h2>회원가입부터 쿠폰함 확인까지</h2><ol className="screenshot-steps">{screenshots.map((step, index) => <li id={`step-${index + 1}`} key={step.file}><div className="screenshot-copy"><span className="step-number">{index + 1}</span><div><h3>{step.title}</h3><p>{step.body}</p></div></div><figure><img src={`/assets/secret-code/step-${step.file}.webp`} alt={step.alt} width={step.width} height={step.height} loading={index === 0 ? "eager" : "lazy"} decoding="async" />{index === 3 && <figcaption>사진 속 사용기간(2025.11.03~12.03)은 지난 예시입니다. 내 쿠폰의 만료일은 쿠폰함에서 확인하세요.</figcaption>}</figure></li>)}</ol><ExternalLink className="button primary" href={partnerUrl}>e7288 입력하고 쿠폰 받기</ExternalLink></section>
       <section id="terms" className="alert-box"><p className="section-kicker">사용 전 확인</p><h2>쿠폰 사용 조건</h2><ul><li>발급일로부터 30일간 사용</li><li>상품당 쿠폰 1개 적용</li><li>교재 제외, 다른 쿠폰과 중복 적용 불가</li><li>교재는 모두 별도 구매</li></ul></section>
       <section id="products"><p className="section-kicker">대상 인강</p><h2>쿠폰 대상상품</h2><p>아래 목록에서 필요한 강의를 찾고, 결제 화면에서 쿠폰을 선택하세요.</p><div className="product-groups">{eligibleProducts.map((group) => <div key={group.instructor}><h3>{group.instructor}</h3><ul>{group.names.map((name) => <li key={name}>{name}</li>)}</ul></div>)}</div><p>교재는 쿠폰 적용 대상에서 제외되며 별도 구매입니다.</p><ExternalLink className="button primary" href={partnerUrl}>대상 강의 보고 쿠폰 받기</ExternalLink></section>

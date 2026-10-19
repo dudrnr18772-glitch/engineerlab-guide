@@ -204,6 +204,15 @@ h2 { color: #153453; font-size: clamp(28px, 3.2vw, 40px); line-height: 1.25; let
 .article-disclosure { color: #7d8997; font-size: 11px; border-left: 3px solid var(--border); padding-left: 13px; }
 .coupon-hero-grid { display: grid; grid-template-columns: 1.1fr .75fr; gap: 70px; align-items: center; }
 .coupon-hero h1 em { color: var(--accent); font-style: normal; font-family: ui-monospace, monospace; letter-spacing: .05em; }
+.discount-answer { display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 24px; align-items: start; }
+.discount-answer h2 { margin-top: 7px; }
+.discount-answer p:not(.section-kicker) { color: #415366; line-height: 1.7; }
+.discount-answer strong { color: var(--primary); }
+.discount-answer dl { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 22px 0; }
+.discount-answer dl > div { padding: 12px; border-radius: 9px; background: var(--blue-soft); }
+.discount-answer dt { color: var(--muted); font-size: 12px; }
+.discount-answer dd { margin: 4px 0 0; color: var(--primary); font-size: 14px; font-weight: 800; }
+.discount-answer > img { display: block; width: 100%; height: auto; border-radius: 12px; }
 .timeline { list-style: none; padding: 0; position: relative; }
 .timeline::before { content: ""; position: absolute; left: 17px; top: 16px; bottom: 16px; width: 1px; background: var(--border); }
 .timeline li { position: relative; display: grid; grid-template-columns: 36px 1fr; gap: 16px; align-items: center; margin: 0 0 15px; }
@@ -290,6 +299,9 @@ h2 { color: #153453; font-size: clamp(28px, 3.2vw, 40px); line-height: 1.25; let
   .inline-cta { display: grid; }
   .alert-box ul { columns: 1; }
   .coupon-hero h1 br { display: none; }
+  .discount-answer { grid-template-columns: 1fr; }
+  .discount-answer > img { width: min(220px, 60%); margin-inline: auto; }
+  .discount-answer dl { grid-template-columns: 1fr 1fr; }
   .screenshot-steps > li { padding: 16px; }
   .screenshot-copy h3 { font-size: 17px; }
   .screenshot-copy p { font-size: 14px; }
