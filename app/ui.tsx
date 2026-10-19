@@ -1,5 +1,5 @@
 import type { Course, FAQItem } from "./site-data";
-import { navigation, partnerUrl, verifiedDate } from "./site-data";
+import { navigation, partnerUrl } from "./site-data";
 import { CopyCodeButton } from "./copy-code";
 import Link from "next/link";
 
@@ -13,21 +13,20 @@ function LogoMark() {
 
 function Header({ currentPath }: { currentPath: string }) {
   return <>
-    <div className="notice-bar"><div className="container"><strong>회원가입 시 시크릿코드 e7288</strong><span>6만원 할인쿠폰 발급 혜택을 확인하세요.</span><Link href="/secret-code/">이용 방법</Link></div></div>
+    <div className="notice-bar"><div className="container"><strong>시크릿코드 e7288</strong><span>회원가입하고 6만원 할인쿠폰 받기</span><Link href="/secret-code/">이용 방법</Link></div></div>
     <header className="site-header">
       <div className="container header-inner">
         <Link className="brand" href="/" aria-label="엔지니어랩 가이드 홈"><LogoMark /><span><strong>엔지니어랩</strong><small>GUIDE</small></span></Link>
         <nav className="desktop-nav" aria-label="주요 메뉴">{navigation.map((item) => <Link key={item.href} href={item.href} aria-current={currentPath === item.href ? "page" : undefined}>{item.label}</Link>)}</nav>
-        <ExternalLink href={partnerUrl} className="header-cta">e7288 쿠폰 조건 확인하기</ExternalLink>
+        <ExternalLink href={partnerUrl} className="header-cta">e7288로 쿠폰 받기</ExternalLink>
         <details className="mobile-nav"><summary aria-label="메뉴 열기"><span></span><span></span><span></span></summary><nav aria-label="모바일 메뉴">{navigation.map((item) => <Link key={item.href} href={item.href} aria-current={currentPath === item.href ? "page" : undefined}>{item.label}</Link>)}<ExternalLink href={partnerUrl}>6만원 쿠폰 확인하기</ExternalLink></nav></details>
       </div>
-      <div className="disclosure-line"><div className="container">본 사이트는 엔지니어랩 공식 홈페이지가 아닌 정보 제공용 가이드입니다. 일부 외부 링크는 제휴 링크일 수 있습니다.</div></div>
     </header>
   </>;
 }
 
 function Footer() {
-  return <footer className="site-footer" id="site-footer"><div className="container footer-grid"><div><Link className="brand footer-brand" href="/"><LogoMark /><span><strong>엔지니어랩</strong><small>INFORMATION GUIDE</small></span></Link><p>전기·소방 자격증과 공기업 취업 준비 과정의 선택 기준을 정리한 비공식 정보 가이드입니다.</p></div><div><h2>강의 가이드</h2>{navigation.slice(1, 7).map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}</div><div><h2>이용 안내</h2><Link href="/secret-code/">시크릿코드·할인쿠폰</Link><Link href="/disclosure/">정보 제공 및 제휴 고지</Link><Link href="/privacy/">개인정보처리방침</Link></div></div><div className="container footer-notice"><p>본 사이트는 엔지니어랩 공식 홈페이지가 아닌 정보 제공용 가이드 사이트입니다. 일부 외부 링크는 제휴 링크일 수 있으며, 강의 구성과 할인 혜택은 엔지니어랩 공식 페이지에서 최종 확인해야 합니다.</p><p>정보 확인일: {verifiedDate}</p></div></footer>;
+  return <footer className="site-footer" id="site-footer"><div className="container footer-grid"><div><Link className="brand footer-brand" href="/"><LogoMark /><span><strong>엔지니어랩</strong><small>INFORMATION GUIDE</small></span></Link><p>전기·소방 자격증과 공기업 취업 준비 과정의 선택 기준을 정리했습니다.</p></div><div><h2>강의 가이드</h2>{navigation.slice(1, 7).map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}</div><div><h2>이용 안내</h2><Link href="/secret-code/">시크릿코드·할인쿠폰</Link><Link href="/disclosure/">정보 제공 및 제휴 고지</Link><Link href="/privacy/">개인정보처리방침</Link></div></div></footer>;
 }
 
 export function SiteShell({ currentPath, children }: { currentPath: string; children: React.ReactNode }) {
@@ -51,7 +50,7 @@ export function CourseGrid({ courses }: { courses: Course[] }) {
 }
 
 export function SecretCodeCard({ compact = false }: { compact?: boolean }) {
-  return <aside className={`code-card${compact ? " compact" : ""}`} aria-label="시크릿코드 안내"><div className="code-card-label"><span>COUPON GUIDE</span><strong>6만원 할인쿠폰</strong></div><div className="code-display"><small>회원가입 시 입력할 코드</small><strong>e7288</strong><CopyCodeButton /></div><ExternalLink className="button primary full" href={partnerUrl}>공식 페이지에서 혜택 확인하기</ExternalLink><p>신규 회원은 가입 단계에서 입력하세요. 쿠폰 조건은 공식 페이지에서 최종 확인해야 합니다.</p><span className="affiliate-note">일부 링크는 제휴 링크일 수 있습니다.</span></aside>;
+  return <aside className={`code-card${compact ? " compact" : ""}`} aria-label="시크릿코드 안내"><div className="code-card-label"><span>COUPON GUIDE</span><strong>6만원 할인쿠폰</strong></div><div className="code-display"><small>회원가입 시 입력할 코드</small><strong>e7288</strong><CopyCodeButton /></div><ExternalLink className="button primary full" href={partnerUrl}>회원가입하고 쿠폰 받기</ExternalLink><p>가입 화면의 ‘시크릿 코드’ 칸에 e7288을 입력하세요.</p></aside>;
 }
 
 export function FAQ({ items }: { items: FAQItem[] }) {
